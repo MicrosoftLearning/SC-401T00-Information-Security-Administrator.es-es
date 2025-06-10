@@ -89,7 +89,7 @@ En esta tarea, publicarás la etiqueta de retención para que los usuarios pueda
 1. En **Nombre de la directiva** escribe:
 
     - **Nombre**: `Sensitive Financial Data Retention`
-    - **Descripción**: `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, and OneDrive.`
+    - **Descripción**: `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, OneDrive, and Teams.`
 
 1. Seleccione **Siguiente**.
 

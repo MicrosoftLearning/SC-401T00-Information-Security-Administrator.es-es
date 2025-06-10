@@ -108,7 +108,7 @@ Puedes reducir aún más el riesgo impidiendo que Copilot procese o responda con
 
 1. En Microsoft Purview, ve a **DSPM para IA** seleccionando **Soluciones** > **DSPM para IA** > **Recomendaciones.**
 
-1. Selecciona la recomendación **Proteger la información confidencial a la que se hace referencia en Microsoft 365 Copilot (versión preliminar).**
+1. Selecciona la recomendación denominada **Proteger la información confidencial a la que se hace referencia en Copilot y las respuestas del agente**.
 
 1. Revisa las instrucciones que se proporcionan en esta recomendación.
 
@@ -144,19 +144,19 @@ Puedes reducir aún más el riesgo impidiendo que Copilot procese o responda con
 
 1. Vuelve a **Recomendaciones de DSPM para IA** seleccionando **Soluciones** > **DSPM para IA** > **Recomendaciones**.
 
-1. Selecciona la recomendación **Proteger la información confidencial a los que se hace referencia en Microsoft 365 Copilot (versión preliminar)** y selecciona **Marcar como completado**.
+1. Selecciona la recomendación **Proteger la información confidencial a los que se hace referencia en Copilot y en las respuestas del agente** y selecciona **Marcar como completado**.
 
 Has creado una directiva DLP que impide que el contenido etiquetado se use en las indicaciones y respuestas de Copilot.
 
-## Tarea 4: Ejecución de una evaluación de datos para detectar contenido sin etiquetar
+## Tarea 4: Ejecutar una evaluación de datos para detectar contenido sin etiquetar
 
 Para comprender las posibles brechas en la cobertura de etiquetado, ejecutarás una evaluación de datos para identificar archivos sin etiquetas de confidencialidad a los que puede acceder Copilot.
 
-1. En **DSPM para IA**, selecciona la recomendación denominada **Proteger la información confidencial a la que se hace referencia en las respuestas de Copilot**.
+1. En **DSPM para IA**, selecciona la recomendación denominada **Proteger la información confidencial a la que se hace referencia en las respuestas de Copilot y del agente**.
 
-1. En el panel **Proteger la información confidencial a la que se hace referencia en las respuestas de Copilot**, revisa el resumen y selecciona **Ir a las evaluaciones**.
+1. En el panel **Proteger la información confidencial a la que se hace referencia en las respuestas de Copilot y del agente**, revisa el resumen y selecciona **Ir a las evaluaciones**.
 
-1. En la página **Evaluaciones de datos (versión preliminar),** selecciona **Crear evaluación (versión preliminar)**
+1. En la página **Evaluaciones de riesgos de datos** selecciona **Crear evaluación personalizada**
 
 1. En la página **Detalles básicos**, escribe:
 

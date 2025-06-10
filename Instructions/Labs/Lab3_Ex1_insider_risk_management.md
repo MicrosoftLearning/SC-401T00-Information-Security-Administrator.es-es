@@ -165,8 +165,6 @@ Has habilitado correctamente Defender para punto de conexión para compartir ale
 
 En esta tarea, configurarás los indicadores de directiva y crearás un grupo de usuarios prioritarios que se puede usar en las directivas de riesgo interno.
 
-> [!note] Los indicadores de Microsoft Defender para punto de conexión pueden aparecer atenuados y no seleccionables si la integración de la tarea anterior no ha terminado de procesarse. Si esto sucede, espera unos minutos y actualiza la página antes de continuar.
-
 1. En **Microsoft Edge**, ve a `https://purview.microsoft.com`.
 
 1. Selecciona **Configuración** > **Administración de riesgos internos**.
