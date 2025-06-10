@@ -153,7 +153,7 @@ En esta tarea, habilitarás la integración entre Microsoft Defender para punto 
 
 1. En el panel de navegación izquierdo, selecciona **Configuración** > **de puntos de conexión** > **Funciones avanzadas**.
 
-1. Desplázate hacia abajo y selecciona el botón de alternancia en **Activado** para **Compartir puntos de conexión con el Centro de cumplimiento de Microsoft**.
+1. Desplázate hacia abajo y establece el botón de alternancia en **Activado** para **Compartir alertas de puntos de conexión con el Centro de cumplimiento de Microsoft**.
 
    ![Captura de pantalla que muestra Compartir puntos de conexión con la alternancia del Centro de cumplimiento de Microsoft.](../Media/enable-irm-in-mde.png)
 
@@ -164,6 +164,8 @@ Has habilitado correctamente Defender para punto de conexión para compartir ale
 ## Tarea 6: Habilitación de indicadores y configuración de usuarios prioritarios
 
 En esta tarea, configurarás los indicadores de directiva y crearás un grupo de usuarios prioritarios que se puede usar en las directivas de riesgo interno.
+
+> [!note] Los indicadores de Microsoft Defender para punto de conexión pueden aparecer atenuados y no seleccionables si la integración de la tarea anterior no ha terminado de procesarse. Si esto sucede, espera unos minutos y actualiza la página antes de continuar.
 
 1. En **Microsoft Edge**, ve a `https://purview.microsoft.com`.
 

@@ -62,8 +62,6 @@ En esta tarea, iniciarás sesión como Joni Sherman para explorar el Microsoft P
 
 1. Aparecerá un mensaje sobre el nuevo Portal de Microsoft Purview en la pantalla. Selecciona **Comenzar** para acceder al nuevo portal.
 
-    ![Captura de pantalla que muestra la pantalla de bienvenida al nuevo Microsoft Purview portal.](../Media/welcome-purview-portal.png)
-
 1. Familiarízate con el nuevo Microsoft Purview Portal. Cuando hayas terminado, deja abierta la ventana del explorador.
 
 Has cambiado correctamente a la cuenta de Joni Sherman y ahora estás listo para iniciar el laboratorio.

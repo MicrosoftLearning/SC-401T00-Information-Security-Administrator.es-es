@@ -58,9 +58,9 @@ En esta tarea, crearás una etiqueta de confidencialidad primaria para el conten
     - **Descripción para los usuarios**: `Internal sensitivity label.`
     - **Descripción para los administradores**: `Internal sensitivity label for Contoso.`
 
-1. Selecciona **Siguiente**.
+1. Seleccione **Siguiente**.
 
-1. En la página **Definir el ámbito de esta etiqueta**, selecciona **Elementos** y, después, selecciona **Archivos** y **Correos electrónicos**. Si la casilla **Reuniones** está activada, asegúrate de desactivarla.
+1. En la página **Definir el ámbito de esta etiqueta**, selecciona **Archivos** y **Correos electrónicos**. Si la casilla **Reuniones** está activada, asegúrate de desactivarla.
 
 1. Seleccione **Siguiente**.
 
@@ -91,9 +91,9 @@ Ahora que tienes una etiqueta base, crearás una subetiqueta para documentos rel
    - **Descripción para los usuarios**: `This HR label is the default label for all specified documents in the HR Department.`
    - **Descripción para los administradores**: `This label is created in consultation with Ms. Jones (Head of HR department). Contact her if you need to change the label settings.`
 
-1. Selecciona **Siguiente**.
+1. Seleccione **Siguiente**.
 
-1. En la página **Definir el ámbito de esta etiqueta**, selecciona **Elementos** y, después, selecciona **Archivos** y **Correos electrónicos**. Si la casilla **Reuniones** está activada, asegúrate de desactivarla.
+1. En la página **Definir el ámbito de esta etiqueta**, selecciona **Archivos** y **Correos electrónicos**. Si la casilla **Reuniones** está activada, asegúrate de desactivarla.
 
 1. Seleccione **Siguiente**.
 
@@ -163,7 +163,7 @@ Ahora publicarás la etiqueta de confidencialidad Interna y de RR. HH. para que 
 
 1. En **Configuración predeterminada para reuniones y eventos de calendario**, selecciona **Siguiente**.
 
-1. En **Configuración predeterminada del contenido de Power BI**, selecciona **Siguiente**.
+1. En la página **Configuración predeterminada del contenido de Fabric y Power BI**, selecciona **Siguiente**.
 
 1. En la página **Asignar nombre a la directiva** escribe:
 
@@ -202,7 +202,7 @@ En esta tarea, crearás una etiqueta de confidencialidad para los datos financie
 
 1. Seleccione **Siguiente**.
 
-1. En la página **Definir el ámbito de esta etiqueta**, selecciona **Elementos** y, después, selecciona **Archivos** y **Correos electrónicos**. Si la casilla **Reuniones** está activada, asegúrate de desactivarla.
+1. En la página **Definir el ámbito de esta etiqueta**, selecciona **Archivos** y **Correos electrónicos**. Si la casilla **Reuniones** está activada, asegúrate de desactivarla.
 
 1. Seleccione **Siguiente**.
 
@@ -262,9 +262,9 @@ En esta tarea, crearás una etiqueta de confidencialidad para los datos financie
 
 Has creado correctamente una etiqueta de confidencialidad para los datos financieros. Además, has configurado una directiva de etiquetado automático para detectar y etiquetar el contenido que contiene información financiera confidencial.
 
-## Tarea 6: Creación y publicación de una etiqueta DKE para contenido altamente confidencial
+## Tarea 6: Creación y publicación de una etiqueta DKE para contenido confidencial
 
-En esta tarea, crearás una subetiqueta bajo la etiqueta altamente confidencial integrada. Esta subetiqueta usará el cifrado de doble clave (DKE) y la marca de agua dinámica para proteger solo el contenido confidencial al que accede el departamento legal. También configurarás una directiva de etiquetas que requiera una justificación para bajar de categoría la etiqueta.
+En esta tarea, crearás una subetiqueta en la etiqueta Interna. Esta subetiqueta usará el cifrado de doble clave (DKE) y la marca de agua dinámica para proteger solo el contenido confidencial al que accede el departamento legal. También configurarás una directiva de etiquetas que requiera una justificación para bajar de categoría la etiqueta.
 
 1. Todavía deberías estar conectado en la máquina virtual Cliente 1 (SC-401-CL1) como la cuenta **SC-401-cl1\admin**.
 
@@ -272,7 +272,7 @@ En esta tarea, crearás una subetiqueta bajo la etiqueta altamente confidencial 
 
 1. En Microsoft Purview Portal, selecciona **Soluciones** > **Information Protection** > **Etiquetas de confidencialidad**.
 
-1. En la página **Etiquetas de confidencialidad**, busca la etiqueta de confidencialidad **Altamente confidencial**. Selecciona los puntos suspensivos verticales (**...**) y selecciona **+ Crear subetiqueta** en el menú desplegable.
+1. En la página **Etiquetas de confidencialidad**, busca la etiqueta de confidencialidad **interna**. Selecciona los puntos suspensivos verticales (**...**) y selecciona **+ Crear subetiqueta** en el menú desplegable.
 
 1. En la página **Proporcionar detalles básicos de esta etiqueta**, escribe:
 
@@ -423,7 +423,7 @@ Ahora que el examen de etiquetas está habilitado, crearás una directiva de arc
 
       - Activa la casilla **Aplicar etiqueta de confidencialidad**
 
-      - Selecciona **General-Cualquiera (sin restricciones)** en el elemento desplegable.
+      - Selecciona **Altamente confidencial-Project Falcon** en el elemento desplegable
 
 1. Selecciona **Crear** para terminar de crear la directiva de archivos.
 

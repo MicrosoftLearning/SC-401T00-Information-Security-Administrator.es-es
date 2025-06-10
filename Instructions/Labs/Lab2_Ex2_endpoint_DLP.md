@@ -19,7 +19,7 @@ A Joni Sherman, el administrador de seguridad de la información recién contrat
 
 En esta tarea, incorporarás un dispositivo Windows 11 para que esté listo para protegerse mediante directivas DLP de punto de conexión.
 
-1. Inicia sesión en la **VM cliente 2 (SC-401-CL2)** como la cuenta **SC-401-cl1\admin**.
+1. Inicia sesión en la **Client 2 VM (SC-401-CL2)** como la cuenta **SC-401-cl2\admin**.
 
 1. Abre Microsoft Edge y ve a **`https://purview.microsoft.com`** e inicia sesión en Microsoft Purview Portal como **Joni Sherman**. Inicia sesión como `JoniS@WWLxZZZZZZ.onmicrosoft.com`, (ZZZZZZ es el identificador de inquilino único proporcionado por el proveedor de hospedaje del laboratorio). La contraseña de Joni se estableció en un ejercicio anterior.
 
@@ -65,7 +65,7 @@ Has incorporado correctamente el dispositivo y lo has unido a Microsoft Entra ID
 
 En esta tarea, crearás una directiva DLP que bloquea la transferencia de información confidencial a unidades USB. Esto ayuda a reducir el riesgo de que los datos salgan del sitio sin autorización.
 
-1. Inicia sesión en la VM Cliente 1 VM (SC-401-CL1) como la cuenta SC-401-cl1\admin.
+1. Inicia sesión en la máquina virtual Client 1 (SC-401-CL1) como la cuenta SC-401-cl1\admin.
 
 1. Todavía deberías estar en la página **Dispositivos** del Microsoft Purview Portal, con la sesión iniciada como Joni Sherman.
 

@@ -24,6 +24,14 @@ En esta tarea, comprobarás la funcionalidad correcta de Azure RMS del inquilino
 
 1. Abre PowerShell al hacer clic con el botón derecho en el botón Inicio de la barra de tareas y al seleccionar **Terminal**.
 
+1. Ejecuta el cmdlet **Install Module** en la ventana de terminal para instalar la versión más reciente del módulo **PowerShell de Exchange Online**:
+
+    ```powershell
+    Install-Module ExchangeOnlineManagement
+    ```
+
+1. Confirma el cuadro de diálogo de seguridad de repositorio no de confianza con **Y** para Sí y presiona **Entrar**.  Este proceso puede tardar un tiempo en finalizar.
+
 1. Ejecuta el cmdlet **Connect-ExchangeOnline** para usar el módulo PowerShell de Exchange Online y conéctate al inquilino:
 
     ```powershell
@@ -93,6 +101,8 @@ Has deshabilitado correctamente los proveedores de identidades sociales, lo que 
 ## Tarea 3: Validación del comportamiento predeterminado de la personalización de marca
 
 Debes confirmar que no se muestra ningún cuadro de diálogo de identificadores sociales para los destinatarios externos al recibir un mensaje protegido con el cifrado de mensajes de Office 365 de los usuarios del inquilino y necesitan usar el OTP en cualquier momento al acceder al contenido cifrado.
+
+> [!alert] La entrega de correo electrónico externo podría bloquearse en algunos entornos de laboratorio. Es posible que esta tarea no se complete según lo previsto.
 
 1. Aún deberías tener la sesión iniciada en la VM Cliente 1 (SC-401-CL1) como **SC-401-CL1\admin**.
 
@@ -187,6 +197,8 @@ Has configurado una regla de transporte que garantiza que los correos electróni
 ## Tarea 5: Validación del comportamiento de la personalización de marca
 
 Para validar la nueva configuración personalizada, debes volver a usar la cuenta de Lynne Robbins, que es miembro del equipo financiero.
+
+> [!alert] Las restricciones de correo electrónico externo pueden impedir que se reciba este mensaje. Es posible que la personalización de marca no aparezca según lo previsto.
 
 1. Vuelve a **Microsoft Edge** con la ventana Outlook en la Web InPrivate donde todavía deberías tener la sesión iniciada como **Lynne Robbins**.
 
