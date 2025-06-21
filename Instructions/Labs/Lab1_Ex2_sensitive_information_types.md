@@ -78,8 +78,6 @@ En esta tarea, crearás un nuevo tipo de información confidencial personalizada
 
 1. En la página **Revisar configuración y finalizar**, revisa la configuración y selecciona **Crear**. Cuando se haya creado correctamente, selecciona **Listo**.
 
-1. Cierra la sesión de la cuenta de Joni mediante la selección de la imagen de perfil de Joni Sherman en la parte superior derecha. Selecciona **Cerrar sesión** y cierra la ventana del explorador.
-
 Has creado correctamente un nuevo tipo de información confidencial para identificar identificadores de empleado en el patrón de tres caracteres en mayúsculas, seis números y las palabras clave "Employee" o "ID" dentro de un intervalo de 100 caracteres.
 
 ## Tarea 2: Modificación del nivel de confianza para reducir falsos positivos
@@ -109,6 +107,8 @@ Has recibido informes de que no se detectan algunos documentos que contienen ide
 1. Selecciona **Siguiente** hasta llegar a la página **Revisar configuración y finalizar**.
 
 1. Selecciona **Guardar** y, a continuación, selecciona **Listo** para actualizar el tipo de información confidencial.
+
+1. Cierra la sesión de la cuenta de Joni mediante la selección de la imagen de perfil de Joni Sherman en la parte superior derecha. Selecciona **Cerrar sesión** y cierra la ventana del explorador.
 
 Has reducido correctamente el nivel de confianza para aumentar la sensibilidad del SIT personalizado, lo que ayuda a garantizar que sea más probable que se marquen los documentos con contenido coincidente parcial.
 

@@ -361,7 +361,7 @@ Has creado y publicado correctamente una subetiqueta con cifrado de doble clave 
 
 ## Tarea 7: Habilitación de la integración de Microsoft Purview en Defender for Cloud Apps
 
-En esta tarea, habilitarás la integración de Microsoft Purview en Microsoft Defender for Cloud Apps. Esto permite a Defender examinar nuevos archivos para detectar etiquetas de confidencialidad de Microsoft Purview e inspeccionar el contenido en función de esas etiquetas.
+En esta tarea, habilitarás la integración de Microsoft Purview en Microsoft Defender for Cloud Apps. Esto permite a Defender examinar nuevos archivos para detectar etiquetas de confidencialidad de Microsoft Purview, inspeccionar el contenido en función de esas etiquetas y supervisar los archivos para poder aplicar políticas de archivos.
 
 1. Todavía deberías estar conectado en la máquina virtual Client 1 (SC-401-CL1) como **SC-401-CL1\admin** tener la sesión iniciada como Joni Sherman.
 
@@ -385,11 +385,17 @@ En esta tarea, habilitarás la integración de Microsoft Purview en Microsoft De
 
 1. Seleccione **Guardar** para aplicar la configuración.
 
-Has habilitado Defender for Cloud Apps para reconocer y examinar archivos en busca de etiquetas de confidencialidad de Microsoft Purview.
+1. En la sección **Information Protection** del panel izquierdo, selecciona **Archivos**.
+
+1. En la página **Archivos**, selecciona el vínculo **Habilitar supervisión de archivos**.
+
+1. Seleccione **Guardar** para aplicar la configuración.
+
+Has habilitado Defender for Cloud Apps para examinar archivos de etiquetas de confidencialidad y supervisar archivos para que las directivas de archivo puedan evaluar y aplicar acciones de gobernanza.
 
 ## Tarea 8: Creación de una directiva de archivos para etiquetar automáticamente archivos compartidos externamente
 
-Ahora que el examen de etiquetas está habilitado, crearás una directiva de archivos que aplique una etiqueta de confidencialidad general a los nuevos archivos que se comparten fuera de la organización.
+Ahora que el examen de etiquetas está habilitado, crearás una directiva de archivos que aplique la etiqueta de confidencialidad **Altamente confidencial - Project - Falcon** a los archivos de las carpetas Mark 8 Project que se comparten fuera de la organización. Esta directiva se clasifica como DLP porque protege los datos confidenciales de la exposición no deseada.
 
 1. En **Microsoft Defender**, ve a **Cloud Apps** > **Directivas** > **Administración de directivas**.
 
@@ -399,11 +405,19 @@ Ahora que el examen de etiquetas está habilitado, crearás una directiva de arc
 
 1. En la página **Crear directiva de archivos**, configura:
 
-   - **Nombre de directiva**: `Auto-label externally shared files`
+   - **Nombre de directiva**: `Auto-label external sharing for Project Falcon files`
 
-   - **Gravedad de directiva**: **baja**
+   - **Gravedad de directiva**: **alta**
 
    - **Categoría**: **DLP**
+
+   - **Aplicar a**: **carpetas seleccionadas**
+
+      - Selecciona **Agregar carpetas** y busca `Project` en el campo **Nombre de archivo**.
+
+      - Activa la casilla de las carpetas **Mark 8 Project Team Notebook** y **Mark 8 Project Team** de SharePoint.
+
+      - Selecciona **Listo** para cerrar la ventana **Seleccionar una carpeta**.
 
    - En la sección **Archivos que coinciden con toda la siguiente sección**:
 
@@ -417,14 +431,14 @@ Ahora que el examen de etiquetas está habilitado, crearás una directiva de arc
 
       - Activa la casilla **Aplicar etiqueta de confidencialidad**
 
-      - En el elemento desplegable, selecciona **General-Cualquiera (sin restricciones)**
+      - En el elemento desplegable, selecciona **Altamente confidencial-Project - Falcon**
 
    - Repite el mismo proceso para **Microsoft SharePoint Online**
 
       - Activa la casilla **Aplicar etiqueta de confidencialidad**
 
-      - Selecciona **Altamente confidencial-Project Falcon** en el elemento desplegable
+      - Selecciona **Altamente confidencial-Project - Falcon** en el elemento desplegable
 
 1. Selecciona **Crear** para terminar de crear la directiva de archivos.
 
-Ha creado una directiva de archivos que aplica una etiqueta de confidencialidad general a los archivos compartidos externamente en SharePoint y OneDrive. Una vez se detecta un archivo coincidente, Defender for Cloud Apps aplicará automáticamente la etiqueta.
+Has creado una directiva de archivos que aplica una etiqueta de confidencialidad de alto nivel a los archivos compartidos externamente ubicados en carpetas del proyecto Mark 8 en SharePoint y OneDrive. Una vez se detecta un archivo coincidente, Defender for Cloud Apps aplicará automáticamente la etiqueta.

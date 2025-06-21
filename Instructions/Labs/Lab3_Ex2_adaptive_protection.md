@@ -12,7 +12,7 @@ Eres Joni Sherman, administrador de seguridad de la información para Contoso Lt
 
 1. Asignación de una directiva de riesgo interno a la protección adaptativa
 1. Configuración de las opciones de protección adaptativa para la directiva DLP
-1. (Opcional) Configuración del acceso condicional con protección adaptativa
+1. Configuración del acceso condicional con protección adaptativa
 1. Habilitación de la protección adaptativa
 
 ## Tarea 1: Asignación de una directiva de riesgo interno a la protección adaptativa
@@ -60,7 +60,7 @@ Ahora que la protección adaptativa está vinculada a la directiva de riesgos in
 
 Has actualizado la directiva DLP para bloquear el uso compartido cuando el riesgo interno es elevado, fortaleciendo la protección de datos en función del comportamiento del usuario.
 
-## Tarea 3: (opcional) Configuración del acceso condicional con protección adaptativa
+## Tarea 3: Configuración del acceso condicional con protección adaptativa
 
 Para agregar otra capa de cumplimiento, puedes usar los niveles de riesgos internos para restringir el acceso mediante el Acceso condicional. En esta tarea, crearás una directiva que bloquea el acceso a los usuarios con un nivel de riesgo interno elevado.
 
@@ -68,11 +68,15 @@ Para agregar otra capa de cumplimiento, puedes usar los niveles de riesgos inter
 
 1. Abre una nueva ventana de Microsoft Edge y ve al **Centro de administración Microsoft Entra** en `https://entra.microsoft.com`. Inicia sesión como **Administrador MOD**, `admin@WWLxZZZZZZ.onmicrosoft.com` (donde ZZZZZZ es el id. de inquilino único proporcionado por el proveedor de hospedaje del laboratorio). La contraseña de Administrador debe ser proporcionada por el proveedor de hospedaje del laboratorio.
 
-1. En la página **Más información necesaria**, selecciona **Siguiente**.
-
-1. En la página **Mantener la cuenta segura**, sigue las indicaciones para configurar la autenticación multifactor (MFA) mediante Microsoft Authenticator u otra aplicación de autenticación.
-
-   Después de completar la configuración de MFA, se te dará acceso al **Centro de administración Microsoft Entra**.
+> [!note] **Nota**: En algunos inquilinos, es posible que veas un mensaje de cumplimiento de MFA del portal al iniciar sesión. Si aparece este mensaje:
+> - Selecciona **Posponer MFA** para retrasar temporalmente la configuración de MFA.
+>
+>   ![Captura de pantalla en la que se muestra la opción de posponer MFA.](../Media/postpone-mfa.png)
+> - Selecciona **Confirmar posposición**.
+>
+> - Selecciona **Continuar inicio de sesión sin MFA** para acceder a Microsoft Entra.
+>
+> Esto pospone el cumplimiento de MFA para el inquilino y te permite continuar con el laboratorio.
 
 1. En el Centro de administración Microsoft Entra, ve a **Protección** > **Acceso condicional** > **Directivas**.
 
@@ -119,7 +123,7 @@ En esta última final, activarás la protección adaptativa para que el sistema 
 
    - En la pestaña **Niveles de riesgo interno**, está seleccionada la **Directiva rápida filtraciones de datos**.
 
-   - En la pestaña **Acceso condicional**, está visible la directiva **Bloquear todo el acceso para el riesgo elevado** (opcional).
+   - En la pestaña **Acceso condicional**, está visible la directiva **Bloquear todo el acceso para el riesgo elevado**.
 
    - En la pestaña **Prevención de pérdida de datos**, se muestra la **Directiva DLP: Protección de tarjetas de crédito**.
 

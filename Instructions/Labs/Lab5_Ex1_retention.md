@@ -22,8 +22,6 @@ Eres Joni Sherman, administrador de cumplimiento en Contoso Ltd. La empresa est�
 1. Publicar una etiqueta de retención.
 1. Crear una directiva de etiqueta de retención con aplicación automática.
 1. Crear una directiva de retención estática.
-1. Crear un ámbito adaptable
-1. Crear una directiva de retención adaptativa.
 1. Recuperar el contenido de SharePoint.
 
 ## Tarea 1: Creación de una etiqueta de retención
@@ -89,7 +87,7 @@ En esta tarea, publicarás la etiqueta de retención para que los usuarios pueda
 1. En **Nombre de la directiva** escribe:
 
     - **Nombre**: `Sensitive Financial Data Retention`
-    - **Descripción**: `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, OneDrive, and Teams.`
+    - **Descripción**: `Makes the 'Sensitive Financial Records' label available to users in Exchange, SharePoint, and OneDrive.`
 
 1. Seleccione **Siguiente**.
 
@@ -184,102 +182,102 @@ En esta tarea, crearás una directiva de retención estática para el contenido 
 
 Has configurado una directiva de retención estática que conserva los mensajes de Teams durante tres años antes de eliminarlos automáticamente.
 
-## Tarea 5: Creación de un ámbito adaptable
+<!------ Commenting out until tenant bug issues are resolved
+## Task 5 – Create an adaptive scope
 
-En esta tarea, definirás un ámbito adaptable destinado a grupos de Microsoft 365 asociados a roles de liderazgo y operaciones.
+In this task, you'll define an adaptive scope that targets Microsoft 365 groups associated with leadership and operations roles.
 
-1. En Microsoft Purview, **Configuración** > **Roles y ámbitos** > **Ámbitos adaptables**.
+1. In Microsoft Purview, **Settings** > **Roles and scopes** > **Adaptive scopes**.
 
-1. En la página **Ámbitos adaptables**, selecciona **+ Crear ámbito**.
+1. On the **Adaptive scopes** page select **+ Create scope**.
 
-1. En la página **Nombre del ámbito de directiva adaptable** escribe:
+1. On the **Name your adaptive policy scope** page enter:
 
-    - **Nombre**: `Leadership and Ops Groups`
-    - **Descripción**: `Targets Leadership and Operations M365 groups with privileged access to sensitive data.`
+    - **Name**: `Leadership and Ops Groups`
+    - **Description**: `Targets Leadership and Operations M365 groups with privileged access to sensitive data.`
 
-1. Seleccione **Siguiente**.
+1. Select **Next**.
 
-1. En la página **Asignar unidad de administración**, selecciona **Siguiente**.
+1. On the **Assign admin unit** page select **Next**.
 
-1. En la página **¿Qué tipo de ámbito deseas crear?**, selecciona **Usuarios** y, a continuación, **Siguiente**.
+1. On the **What type of scope do you want to create?** page select **Users**, then select **Next**.
 
-1. En la página **Crear la consulta para definir usuarios**, en la sección **Atributos del usuario**, asegúrate de que estos valores están seleccionados para la configuración del atributo del usuario:
+1. On the **Create the query to define users** page, in the **User attributes** section, ensure these values are selected for the user attribute configuration:
 
-   - Selecciona la lista desplegable **Atributo** y, a continuación, selecciona **Departamento**.
-   - Deja el valor predeterminado **es igual a** en el siguiente campo.
-   - Escribe `Leadership` como el **Valor**.
+   - Select the **Attribute** dropdown then select **Department**
+   - Leave the default **is equal to** value in the next field
+   - Enter `Leadership` as the **Value**
 
-1. Agrega un segundo atributo seleccionando **+ Agregar atributo** en la página **Crear la consulta para definir usuarios**. En el nuevo campo en el que acabamos de configurar, configura estos valores:
+1. Add a second attribute by selecting **+ Add attribute** on the **Create the query to define users** page. In the new field under the one we just configured, configure these values:
 
-   - Selecciona el elemento desplegable del operador de consulta y actualízalo de Y a **O**.
-   - Selecciona la lista desplegable **Atributo** y, a continuación, selecciona **Departamento**.
-   - Deja el valor predeterminado **es igual a** en el siguiente campo.
-   - Escribe `Operations`como el **Valor**.
+   - Select the dropdown for the query operator and update it from And to **Or**
+   - Select the **Attribute** dropdown then select **Department**
+   - Leave the default **is equal to** value in the next field
+   - Enter `Operations` as the **Value**
 
-1. Seleccione **Siguiente**.
+1. Select **Next**.
 
-1. En la página **Revisar y finalizar**, seleccione **Enviar**.
+1. On the **Review and finish** page select **Submit**.
 
-1. Una vez creado el ámbito adaptable, selecciona **Listo** en la página **Se creó el ámbito**.
+1. Once your adaptive scope is created select **Done** on the **Your scope was created** page.
 
-Has creado un ámbito adaptable para admitir la retención dirigida a grupos con privilegios en la organización.
+You've created an adaptive scope to support targeted retention for privileged groups in the organization.
 
-## Tarea 6: Creación de una directiva de retención adaptable
+## Task 6 – Create an adaptive retention policy
 
-En esta tarea, usarás el ámbito adaptable que creaste para configurar una directiva de retención para grupos de Microsoft 365 con responsabilidades confidenciales.
+In this task, you'll use the adaptive scope you created to configure a retention policy for Microsoft 365 groups with sensitive responsibilities.
 
-1. En Microsoft Purview, ve a **Soluciones** > **Administración del ciclo de vida de datos** > **Directivas** >  **Directivas de retención**.
+1. In Microsoft Purview, navigate to **Solutions** > **Data Lifecycle Management** > **Policies** >  **Retention policies**.
 
-1. En la página **Directivas de retención**, selecciona **+ Nueva directiva de retención**.
+1. On the **Retention policies** page, select **+ New retention policy**.
 
-1. En la página **Nombre a la directiva de retención**, escribe:
+1. On the **Name your retention policy** page enter:
 
-    - **Nombre**: `Privileged Group Retention`
-    - **Descripción**: `Retains content from Leadership and Operations groups for 5 years to support audit and investigation.`
+    - **Name**: `Privileged Group Retention`
+    - **Description**: `Retains content from Leadership and Operations groups for 5 years to support audit and investigation.`
 
-1. Seleccione **Siguiente**.
+1. Select **Next**.
 
-1. En la página **Ámbito de directiva**, selecciona **Siguiente**.
+1. On the **Policy Scope** page select **Next**.
 
-1. En la página **Elegir el tipo de directiva de retención que se va a crear**, selecciona **Adaptable** y, a continuación, **Siguiente**.
+1. On the **Choose the type of retention policy to create** page select **Adaptive** then select **Next**.
 
-1. En la página **Elegir ámbitos y ubicaciones de la directiva adaptable**, selecciona **+ Agregar ámbitos**.
+1. On the **Choose adaptive policy scopes and locations** page select **+ Add scopes**.
 
-1. En el panel de control flotante **Elegir ámbitos de directiva adaptable**, activa la casilla de **Liderazgo y grupos de operaciones** y, a continuación, selecciona **Agregar** en la parte inferior del panel.
+1. On the **Choose adaptive policy scopes** flyout panel select the checkbox for **Leadership and Ops Groups** then select **Add** at the bottom of the panel.
 
-1. De vuelta en **Elegir las ubicaciones donde aplicar la directiva** habilita:
+1. Back on the **Choose locations to apply the policy** enable:
 
-    - Buzones y sitios de grupo de Microsoft 365
-    - Deja todas las demás ubicaciones deshabilitadas.
+    - Microsoft 365 Group mailboxes & sites
+    - Leave all other locations disabled.
 
-1. Seleccione **Siguiente**.
+1. Select **Next**.
 
-1. En la página **Decidir si deseas conservar el contenido, eliminarlo o ambos**, asegúrate de que estos valores se establecen para la configuración de retención:
+1. On the **Decide if you want to retain content, delete it, or both** page, ensure these values are set for the retention configuration:
 
-   - Selecciona **Retener los elementos durante un período específico **.
-   - En **Conservar elementos durante un período específico**, selecciona **5 años** en la lista desplegable.
-   - **Iniciar el período de retención en función de**: cuándo se modificaron los elementos por última vez
-   - **Al final del período de retención**: elimina los elementos automáticamente
+   - Select **Retain items for a specific period**.
+   - Under **Retain items for a specific period**, select **5 years** from the dropdown list
+   - **Start the retention period based on**: When items were last modified
+   - **At the end of the retention period**: Delete items automatically
 
-1. Seleccione **Siguiente**.
+1. Select **Next**.
 
-1. En la página **Revisar y finalizar**, seleccione **Enviar**.
+1. On the **Review and finish** page select **Submit**.
 
-1. Una vez creada la directiva, selecciona **Listo**.
+1. Select **Done** once the policy is created.
 
-Has creado una directiva de retención que se aplicará al contenido que pertenece a grupos con privilegios y se conservará durante cinco años antes de su eliminación.
+You've created a retention policy that applies to content owned by privileged groups, retaining it for five years before deletion.
+-->
 
-## Tarea 7: Recuperación de contenido de SharePoint
+## Tarea 5: Recuperar contenido de SharePoint
 
 En esta tarea, simularás la restauración de un documento eliminado de un sitio de SharePoint para validar las opciones de recuperación.
 
-1. Inicia sesión en la VM Cliente 1 (SC-401-CL1) como la cuenta **SC-401-cl1\admin** .
+1. Todavía deberías estar conectado en la máquina virtual Client 1 (SC-401-CL1) con la cuenta **SC-401-CL1\admin** y haber iniciado sesión como Joni Sherman en Microsoft Purview.
 
-1. En **Microsoft Edge**, ve a **`https://www.office.com`** e inicia sesión en Microsoft 365 como **Joni Sherman**.
+1. Selecciona el iniciador de aplicaciones (el icono de cuadrícula) en la esquina superior izquierda y, luego, selecciona **SharePoint** en el submenú.
 
-1. En la página de aterrizaje de Microsoft Office 365, selecciona el iniciador de aplicaciones (el icono de cuadrícula) en la esquina superior izquierda y, después, selecciona **SharePoint** en el submenú.
-
-   ![Captura de pantalla que muestra dónde se muestran los puntos suspensivos para mostrar el menú de acciones.](../Media/show-more-actions-sharepoint.png)
+   ![Captura de pantalla que muestra dónde se muestran los puntos suspensivos para mostrar el menú de acciones.](../Media/sharepoint-app-launcher.png)
 
 1. En la página de aterrizaje de SharePoint, busca `Benefits` y selecciona **Ventajas @ Contoso** en los resultados de búsqueda.
 
@@ -296,5 +294,3 @@ En esta tarea, simularás la restauración de un documento eliminado de un sitio
 1. En la barra lateral izquierda, selecciona **Documentos** y observa que se ha restaurado el archivo.
 
 Has recuperado correctamente un documento eliminado de un sitio de SharePoint.
-
-Has restaurado el contenido eliminado de SharePoint, validando la recuperación de documentos en caso de eliminación accidental o no autorizada.

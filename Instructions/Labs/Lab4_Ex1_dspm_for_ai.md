@@ -20,7 +20,7 @@ Eres Joni Sherman, la administradora de seguridad de la información de Contoso 
 
 1. Uso de DSPM para IA para crear una directiva DLP para sitios de IA generativa
 1. Creación de una directiva de riesgos internos para detectar interacciones de IA arriesgadas
-1. (Opcional) Impedir que Copilot acceda al contenido etiquetado
+1. Bloqueo del acceso de Copilot al contenido etiquetado
 1. Ejecución de una evaluación de datos para detectar contenido sin etiquetar
 
 ## Tarea 1: Uso de DSPM para IA para crear una directiva DLP para sitios de IA generativa
@@ -55,7 +55,8 @@ Para reducir el riesgo de pérdida de datos a través de asistentes de IA, crear
 
 1. Revisa la configuración de la regla creada por DSPM para IA:
    - En **Condiciones**, observa los tipos de información confidencial incluidos y que la regla usa la **protección adaptativa** en función del riesgo elevado.
-   - En **Acciones**, confirma que el **Dominio de servicio y las actividades del explorador** están en **Bloquear con invalidación** para **Sitios web de IA generativa**.
+   - En **Acciones**, tanto para las actividades Subir y Pegar, selecciona **Editar** junto a **Restricciones del grupo de dominio de servicio confidenciales**.
+   - En la configuración del grupo de dominios de servicio, confirma que en **Sitios web de IA generativa** la opción de configuración seleccionada es **Bloquear con invalidación**.
 
 1. Selecciona **Cancelar** para salir del editor de reglas sin realizar cambios.
 
@@ -102,13 +103,13 @@ Confirma que el evento desencadenante es **Cuenta de usuario eliminada de Micros
 
 Has creado una directiva que detecta interacciones de IA de riesgo, incluyendo las solicitudes y respuestas, para ayudar a identificar temprano los signos de comportamiento de los usuarios de riesgo.
 
-## Tarea 3: (opcional) Bloqueo del acceso de Copilot al contenido etiquetado
+## Tarea 3: Bloqueo del acceso de Copilot al contenido etiquetado
 
 Puedes reducir aún más el riesgo impidiendo que Copilot procese o responda con contenido protegido por etiquetas de confidencialidad.
 
 1. En Microsoft Purview, ve a **DSPM para IA** seleccionando **Soluciones** > **DSPM para IA** > **Recomendaciones.**
 
-1. Selecciona la recomendación denominada **Proteger la información confidencial a la que se hace referencia en Copilot y las respuestas del agente**.
+1. Selecciona la recomendación **Proteger la información confidencial a la que se hace referencia en Microsoft 365 Copilot y en los agentes (versión preliminar)**.
 
 1. Revisa las instrucciones que se proporcionan en esta recomendación.
 
@@ -129,9 +130,9 @@ Puedes reducir aún más el riesgo impidiendo que Copilot procese o responda con
 
    - **Nombre**: `Prevent Copilot from accessing labeled data`
    - En **Condiciones**, selecciona **Agregar condición** > **El contenido incluye** > **Etiquetas de confidencialidad**. Agrega estas etiquetas de confidencialidad:
-     - `Internal`
-     - `Confidential`
-     - `Highly Confidential`
+     - `Trusted People`
+     - `Project - Falcon`
+     - `Financial Data`
    - Seleccione **Agregar**.
    - En **Acciones**, selecciona **Agregar una acción** > **Impedir que Copilot procese contenido (versión preliminar)**
    - Selecciona **Guardar** en la parte inferior del control flotante de **Crear regla**.
@@ -144,7 +145,7 @@ Puedes reducir aún más el riesgo impidiendo que Copilot procese o responda con
 
 1. Vuelve a **Recomendaciones de DSPM para IA** seleccionando **Soluciones** > **DSPM para IA** > **Recomendaciones**.
 
-1. Selecciona la recomendación **Proteger la información confidencial a los que se hace referencia en Copilot y en las respuestas del agente** y selecciona **Marcar como completado**.
+1. Selecciona la recomendación **Proteger la información confidencial a los que se hace referencia en Microsoft 365 Copilot y en los agentes (versión preliminar)** y selecciona **Marcar como completado**.
 
 Has creado una directiva DLP que impide que el contenido etiquetado se use en las indicaciones y respuestas de Copilot.
 
@@ -152,9 +153,9 @@ Has creado una directiva DLP que impide que el contenido etiquetado se use en la
 
 Para comprender las posibles brechas en la cobertura de etiquetado, ejecutarás una evaluación de datos para identificar archivos sin etiquetas de confidencialidad a los que puede acceder Copilot.
 
-1. En **DSPM para IA**, selecciona la recomendación denominada **Proteger la información confidencial a la que se hace referencia en las respuestas de Copilot y del agente**.
+1. En **DSPM para IA**, selecciona la recomendación denominada **Proteger la información confidencial a la que se hace referencia en Copilot y en las respuestas del agente**.
 
-1. En el panel **Proteger la información confidencial a la que se hace referencia en las respuestas de Copilot y del agente**, revisa el resumen y selecciona **Ir a las evaluaciones**.
+1. En el panel **Proteger la información confidencial a la que se hace referencia en Copilot y en las respuestas del agente**, revisa el resumen y selecciona **Ir a las evaluaciones**.
 
 1. En la página **Evaluaciones de riesgos de datos** selecciona **Crear evaluación personalizada**
 

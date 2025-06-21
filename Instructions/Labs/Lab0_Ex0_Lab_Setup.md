@@ -14,14 +14,15 @@ Los inquilinos no se deben convertir a suscripciones de pago. Los inquilinos obt
 
 # Configuración del laboratorio: Preparación del entorno para administración
 
-En este laboratorio, configurarás y prepararás el entorno para las tareas de administración. Activarás las características necesarias, configurarás los permisos administrativos y garantizarás la configuración adecuada de los elementos clave.
+En este laboratorio, configurarás y prepararás el entorno para las tareas de administración. Habilitarás las características necesarias, configurarás los permisos y prepararás los servicios principales para la administración.
 
 **Tareas:**
 
-1. Habilitación de la auditoría en el Portal de Microsoft Purview
-1. Establecimiento de contraseñas de usuario para ejercicios de laboratorio
-1. Habilitar incorporación de dispositivos
-1. Habilitación del análisis de riesgos internos
+1. Habilitación de la auditoría en el Portal de Microsoft Purview  
+1. Habilitar incorporación de dispositivos  
+1. Habilitación del análisis de riesgos internos y uso compartido de datos  
+1. Establecimiento de contraseñas de usuario para ejercicios de laboratorio  
+1. Inicialización de Microsoft Defender XDR
 
 ## Tarea 1: Habilitación de la auditoría en Microsoft Purview portal
 
@@ -53,7 +54,7 @@ En esta tarea, habilitarás la auditoría en el Portal de Microsoft Purview para
     Install-Module ExchangeOnlineManagement
     ```
 
-1. Confirm the NuGet provider prompt  by typing **Y** for Yes and press **Enter**.
+1. Confirm the NuGet provider prompt by typing **Y** for Yes and press **Enter**.
 
 1. Confirm the Untrusted repository security dialog with **Y** for Yes and press **Enter**.  This process may take some time to complete.
 
@@ -101,13 +102,63 @@ En esta tarea, habilitarás la auditoría en el Portal de Microsoft Purview para
 
 Has habilitado correctamente la auditoría en Microsoft 365.
 
-## Tarea 2: Establecimiento de contraseñas de usuario para ejercicios de laboratorio
+## Tarea 2: Habilitación de la incorporación de dispositivos
+
+En esta tarea, habilitarás la incorporación de dispositivos para tu organización.
+
+1. Todavía deberías estar conectado en la máquina virtual Client 1 (SC-401-CL1) como la cuenta **SC-401-CL1\admin** y deberías estar como Administrador de MOD en Microsoft 365.
+
+1. En **Microsoft Edge**, ve a **`https://purview.microsoft.com`** para iniciar sesión en Microsoft Purview y selecciona **Configuración** en la barra lateral izquierda.
+
+1. En la barra lateral izquierda, expande **Incorporación de dispositivos** y selecciona **Dispositivos**.
+
+1. En la página **Dispositivos**, selecciona **Activar la incorporación de dispositivos** y, después, selecciona **Aceptar** para habilitar la incorporación de dispositivos.
+
+1. Cuando se te solicite, selecciona **Aceptar** para confirmar que la supervisión de dispositivos está activada.
+
+Ya has habilitado la incorporación de dispositivos, así que puedes empezar a incorporar dispositivos para protegerte con directivas DLP de punto de conexión. El proceso para habilitar la característica puede tardar hasta 30 minutos.
+
+## Tarea 3: Habilitación del análisis de riesgos internos y uso compartido de datos
+
+En esta tarea, habilitarás el análisis y el uso compartido de datos para la administración de riesgos internos.
+
+1. Todavía deberías estar conectado en la máquina virtual Client 1 (SC-401-CL1) como la cuenta **SC-401-CL1\admin** y estar como Administrador de MOD en Microsoft Purview.
+
+1. En Microsoft Purview, ve a **Configuración** > **Administración de riesgos internos** > ** Análisis.**
+
+1. Cambia esta configuración a **Activado**:
+
+   - **Mostrar información en el nivel de inquilino**
+
+   - **Mostrar información en el nivel de usuario**
+
+1. Seleccione **Guardar** en la parte inferior de la página.
+
+1. En el panel de navegación izquierdo, selecciona **Uso compartido de datos**.
+
+1. En la sección Uso compartido de datos, cambia **Compartir detalles de riesgo de usuario con otras soluciones de seguridad** a **Activado**.
+
+1. Seleccione **Guardar** en la parte inferior de la página.
+
+Has habilitado el análisis y el uso compartido de datos para la administración de riesgos internos.
+
+## Tarea 4: Establecimiento de contraseñas de usuario para ejercicios de laboratorio
 
 En esta tarea, establecerás contraseñas para las cuentas de usuario necesarias para los laboratorios.
 
-1. Inicia sesión en la máquina virtual Client 1 (SC-401-CL1) como la cuenta **SC-401-CL1\admin**. El proveedor de hospedaje del laboratorio debe proporcionar la contraseña.
+1. Todavía deberías estar conectado en la máquina virtual Client 1 (SC-401-CL1) como la cuenta **SC-401-CL1\admin** y deberías estar como Administrador de MOD en Microsoft 365.
 
 1. Abre **Microsoft Edge** y ve a **`https://admin.microsoft.com`** para iniciar sesión en el Centro de administración de Microsoft 365 como Administrador MOD, `admin@WWLxZZZZZZ.onmicrosoft.com` (donde ZZZZZZ es tu identificador de inquilino único proporcionado por el proveedor de hospedaje del laboratorio).
+
+> [!note] **Nota**: En algunos inquilinos, es posible que veas un mensaje de cumplimiento de MFA del portal al iniciar sesión. Si aparece este mensaje:
+> - Selecciona **Posponer MFA** para retrasar temporalmente la configuración de MFA.
+>
+>   ![Captura de pantalla en la que se muestra la opción de posponer MFA.](../Media/postpone-mfa.png)
+> - Selecciona **Confirmar posposición**.
+>
+> - Selecciona **Continuar inicio de sesión sin MFA** para acceder al centro de administración.
+>
+> Esto pospone el cumplimiento de MFA para el inquilino y te permite continuar con el laboratorio.
 
 1. En el panel de navegación izquierdo, expande **Usuarios** y selecciona **Todos los usuarios**.
 
@@ -133,46 +184,6 @@ En esta tarea, establecerás contraseñas para las cuentas de usuario necesarias
 
 Has restablecido correctamente las contraseñas de los ejercicios de laboratorio.
 
-## Tarea 3: Habilitación de la incorporación de dispositivos
-
-En esta tarea, habilitarás la incorporación de dispositivos para tu organización.
-
-1. Todavía deberías estar conectado en la máquina virtual Client 1 (SC-401-CL1) como la cuenta **SC-401-CL1\admin** y deberías estar como Administrador de MOD en Microsoft 365.
-
-1. En **Microsoft Edge**, ve a **`https://purview.microsoft.com`** para iniciar sesión en Microsoft Purview y selecciona **Configuración** en la barra lateral izquierda.
-
-1. En la barra lateral izquierda, expande **Incorporación de dispositivos** y selecciona **Dispositivos**.
-
-1. En la página **Dispositivos**, selecciona **Activar la incorporación de dispositivos** y, después, selecciona **Aceptar** para habilitar la incorporación de dispositivos.
-
-1. Cuando se te solicite, selecciona **Aceptar** para confirmar que la supervisión de dispositivos está activada.
-
-Ya has habilitado la incorporación de dispositivos, así que puedes empezar a incorporar dispositivos para protegerte con directivas DLP de punto de conexión. El proceso para habilitar la característica puede tardar hasta 30 minutos.
-
-## Tarea 4: Habilitación del análisis de riesgos internos y uso compartido de datos
-
-En esta tarea, habilitarás el análisis y el uso compartido de datos para la administración de riesgos internos.
-
-1. Todavía deberías estar conectado en la máquina virtual Client 1 (SC-401-CL1) como la cuenta **SC-401-CL1\admin** y estar como Administrador de MOD en Microsoft Purview.
-
-1. En Microsoft Purview, ve a **Configuración** > **Administración de riesgos internos** > ** Análisis.**
-
-1. Cambia esta configuración a **Activado**:
-
-   - **Mostrar información en el nivel de inquilino**
-
-   - **Mostrar información en el nivel de usuario**
-
-1. Seleccione **Guardar** en la parte inferior de la página.
-
-1. En el panel de navegación izquierdo, selecciona **Uso compartido de datos**.
-
-1. En la sección Uso compartido de datos, cambia **Compartir detalles de riesgo de usuario con otras soluciones de seguridad** a **Activado**.
-
-1. Seleccione **Guardar** en la parte inferior de la página.
-
-Has habilitado el análisis y el uso compartido de datos para la administración de riesgos internos.
-
 ## Tarea 5: Inicialización de Microsoft Defender XDR
 
 En esta tarea, abrirás Microsoft Defender y esperarás a que Microsoft Defender XDR termine de inicializarse.
@@ -182,6 +193,8 @@ En esta tarea, abrirás Microsoft Defender y esperarás a que Microsoft Defender
 1. En **Microsoft Edge**, ve a **`https://security.microsoft.com/`** para abrir Microsoft Defender.
 
 1. En el panel de navegación, selecciona **Investigación y respuesta** > **Incidentes y alertas** > ** Incidentes.**
+
+> [!note] **Nota**: La pantalla de inicialización de Microsoft Defender XDR podría aparecer o no en función del inquilino del laboratorio. Si aparece, puedes continuar con otras tareas mientras se completa en segundo plano.
 
 1. Verás un mensaje que indica que se está preparando Microsoft Defender XDR. Este proceso se ejecuta automáticamente y puede tardar unos minutos.
 

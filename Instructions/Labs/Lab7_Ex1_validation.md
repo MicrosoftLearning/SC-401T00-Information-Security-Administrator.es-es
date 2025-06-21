@@ -28,9 +28,7 @@ En esta tarea, comprobarás que las etiquetas de confidencialidad publicadas est
 
 1. Todavía deberías tener la sesión iniciada en la VM Cliente 1 (SC-401-CL1) como la cuenta **SC-401-CL1\admin** y debes tener la sesión iniciada en Microsoft 365 como **Joni Sherman**`JoniS@WWLxZZZZZZ.onmicrosoft.com` (donde ZZZZZZ es tu id. de inquilino único proporcionado por el proveedor de hospedaje del laboratorio). La contraseña de Joni se estableció en un ejercicio anterior.
 
-1. En Microsoft Edge, selecciona el iniciador de aplicaciones en la parte superior izquierda y elige **Word**.
-
-    ![Captura de pantalla en la que se muestra dónde seleccionar Word en el menú iniciador de aplicaciones.](../Media/meatball-menu-word.png)
+1. En Microsoft Edge, ve a `https://word.office.com` e inicia sesión en Microsoft Office como **Joni Sherman**`JoniS@WWLxZZZZZZ.onmicrosoft.com` (donde ZZZZZZ es tu identificador de inquilino único proporcionado por el proveedor de hospedaje del laboratorio). La contraseña de Joni se estableció en un ejercicio anterior.
 
 1. Selecciona **Documento en blanco**.
 
@@ -46,7 +44,7 @@ En esta tarea, comprobarás que las etiquetas de confidencialidad publicadas est
 
     > [!Note] Las etiquetas de confidencialidad recién publicadas pueden tardar entre 24 y 48 horas en estar disponibles para la aplicación. Si las etiquetas de confidencialidad recién creadas no están disponibles, puedes usar **Confidencial** > **Todos los empleados** para este ejercicio.
 
-1. Cambia la etiqueta de confidencialidad a **Público** para comprobar que aparece el cuadro de diálogo de justificación comercial.
+1. Cambia la etiqueta de confidencialidad a **Altamente confidencial** > **Project - Falcon** para comprobar que aparece el cuadro de diálogo de justificación comercial.
 
 1. Selecciona **Cancelar** para mantener la etiqueta de confidencialidad.
 

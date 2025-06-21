@@ -22,7 +22,7 @@ En esta tarea, comprobarás la funcionalidad correcta de Azure RMS del inquilino
 
 1. Todavía debes tener la sesión iniciada en la máquina virtual Client 1 (SC-401-CL1) como la cuenta **SC-401-CL1\admin**.
 
-1. Abre PowerShell al hacer clic con el botón derecho en el botón Inicio de la barra de tareas y al seleccionar **Terminal**.
+1. Abre PowerShell haciendo clic con el botón derecho en el botón Inicio de la barra de tareas y seleccionando **Terminal (Administrador)**.
 
 1. Ejecuta el cmdlet **Install Module** en la ventana de terminal para instalar la versión más reciente del módulo **PowerShell de Exchange Online**:
 
